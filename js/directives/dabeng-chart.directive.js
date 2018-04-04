@@ -54,17 +54,6 @@ function dabengChart() {
                 $scope.onDrop(sourceId, targetId);
             });
 
-            function removeObject(array, key, value) {
-                array.some(function iter(a) {
-                    if (_.findIndex(a.children, { employeeId: value }) > -1) {
-                        _.remove(a.children, { employeeId: value});
-                        return;
-                    }
-                    return Array.isArray(a.children) && a.children.some(iter);
-                });
-                return;
-            }
-
             function getObject(array, key, value) {
                 var o;
                 array.some(function iter(a) {

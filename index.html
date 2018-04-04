@@ -11,33 +11,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+        <link href="vendor/css/jquery.orgchart.css" rel="stylesheet" type="text/css" />
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
     </head>
-    <body ng-app="main" ng-controller="dragDropController">
+    <body ng-app="main" ng-controller="dabengController">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <ul class="employees">
-                        <li ng-repeat="employee in employees" drag-on-me="employee" on-drop="onDropped">
-                            <div ng-bind="employee.name" drag-me="employee"></div>
-                        </li>
-                    </ul>
+                <div class="col-sm-12 text-center">
+                    <div class="org-chart" dabeng-chart chart-data="employees" on-drop="onDrop"></div>
                 </div>
             </div>
         </div>
 
-        
-
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="vendor/js/jquery.orgchart.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
-        <script src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart','orgchart']}]}"></script>
         <script src="js/app.js"></script>
-        <script src="js/controllers/main-controller.js"></script>
-        <script src="js/directives/drag-me.directive.js"></script>
-        <script src="js/directives/drag-on-me.directive.js"></script>
+        <script src="js/controllers/dabeng-controller.js"></script>
+        <script src="js/directives/dabeng-chart.directive.js"></script>
+
+
     </body>
 </html>
