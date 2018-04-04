@@ -1,0 +1,16 @@
+ul.employees li {
+    list-style: none;
+    padding: 5px;
+    border: 1px solid silver;
+    background-color: #f7dfa8;
+}
+
+.employee {
+    margin: 5px;
+    border: 1px solid silver;
+    background-color: #f7dfa8;
+}
+
+.employee-content {
+    padding: 5px;
+}

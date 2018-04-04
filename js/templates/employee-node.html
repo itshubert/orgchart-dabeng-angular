@@ -1,0 +1,9 @@
+<div class="employee" drag-on-me="employee" on-drop="onDrop">
+    <div class="employee-content" ng-bind="employee.name" drag-me="employee"></div>
+
+    <div ng-if="employee.employees && employee.employees.length > 0">
+        <div ng-repeat="employee in employee.employees">
+            <employee-node employee="employee" on-drop="onDropped"></employee-node>
+        </div>
+    </div>
+</div>
