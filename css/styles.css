@@ -27,3 +27,7 @@ ul.employees li {
     overflow: auto;
     text-align: center;
   }
+
+  [dabeng-chart] {
+      height: 100%;
+  }

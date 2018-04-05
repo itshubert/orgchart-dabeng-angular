@@ -20,10 +20,12 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <div class="org-chart" dabeng-chart chart-data="employees" on-drop="onDrop"></div>
+                    <div style="height: 100%;">
+                        <div dabeng-chart chart-data="employees" on-drop="onDrop"></div>
+                    </div>
                 </div>
             </div>
         </div>

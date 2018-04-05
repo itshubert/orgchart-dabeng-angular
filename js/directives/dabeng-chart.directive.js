@@ -14,6 +14,9 @@ function dabengChart() {
                 'nodeTitle': 'alias',
                 'nodeContent': 'title',
                 'draggable': true,
+                'pan': true,
+                'zoom': true,
+                'toggleSiblingsResp': true,
                 'dropCriteria': function($draggedNode, $dragZone, $dropZone) {
                     if($draggedNode.find('.content').text().indexOf('manager') > -1 && $dropZone.find('.content').text().indexOf('engineer') > -1) {
                       return false;
